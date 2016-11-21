@@ -67,29 +67,44 @@ Download corresponding SDK library from KAA server to {APP_DIRECTORY}/lib/kaa/ a
 ```
 cd lib/kaa/
 tar -zxvf kaa-cpp-ep-sdk-*.tar.gz
+cd -
 ```
 Now you are all set to compile and run application.
 * For each application compile KAA SDK
 * Install node libraries
 * Compile application
 
-Now, go into application root folder e.g. kaa-notification and start following these instructions:
+Now, go into application root folder e.g. kaa-notification and install nodeJS packages needed:
 ```
 npm install
+```
+Let's compile SDK lib. This compilation step is needed only one time. And needed to be compiled only when SDK lib is changed/updated.
+```
 cd lib/kaa/
 cmake-js build
 cd -
+```
+This is the time to compile addon library which will be referred from JS land. Outcome of this compilation will be .node
+library. This step is needed everytime when there are changes in native application or SDK library.
+```
 cmake-js build
 ```
-After success of above compilation your application is ready to test. You can start with NodeJS test first.
+After success of above compilation your application is ready to test. We can start with NodeJS test first.
 ```
 nodejs test.js
 ```
-Now you can move this application to .node-red/nodes/ and start node-red to test your Node-RED app
+Now we can move this application to .node-red/nodes/ and start node-red to test Node-RED app
 ```
 node-red
 ```
-After running Node-RED browserapp, you will be able to see Kaa modules in the pannel. You can go ahead with usual way of Node-RED test flow test from here.
+After running Node-RED browserapp, we will be able to see Kaa modules in Node-RED browser pannel. You can go ahead with usual way of Node-RED test flow test from here.
+
+### Output
+Output of kaa-configuration will be something like below:
+```
+msg : Object
+{ "payload": "{\"Kaa GitHub repository\":\"https:\\/\\/github.com\\/kaaproject\\/kaa\",\"Kaa configuration design reference\":\"http:\\/\\/docs.kaaproject.org\\/display\\/KAA\\/Configuration\",\"Kaa docs\":\"http:\\/\\/docs.kaaproject.org\\/display\\/KAA\\/Kaa+IoT+Platform+Home\",\"Kaa website\":\"http:\\/\\/www.kaaproject.org\"}\n", "_msgid": "b0441197.4fbbf" }
+```
 
 ### What is not mentioned here
 All the setup guide is described with consideration that you already have prior experience with relevant projects. If you are new to any of these, it is very important to go through and understand at first. 
