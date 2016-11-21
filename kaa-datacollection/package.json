@@ -1,0 +1,16 @@
+{
+  "name": "kaa-data-collection",
+  "version": "1.0.0",
+  "description": "Sending event messages to  Kaa server",
+  "author": "Abhishek Dwivedi",
+  "homepage": "https://github.com/abhishekkumardwivedi/Kaa-node",
+  "main": "addon.js",
+  "scripts": {
+    "install": ""
+  },
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "cmake-js": "^3.3.1",
+    "nan": "^2.4.0"
+  }
+}

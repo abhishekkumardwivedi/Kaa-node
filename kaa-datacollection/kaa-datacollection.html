@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    RED.nodes.registerType('data-collection',{
+        category: 'kaa',
+        color: '#FFC300',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "bridge.png",
+        label: function() {
+            return this.name||"Data Collection";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="data-collection">
+    <div class="form-row">
+        <label for="node-output-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-output-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="data-collection">
+    <p>Kaa data collection node. Receives message and sends it to Kaa server.</p>
+    <p>Kaa server is configured at KAA SDK.</p>
+</script>
