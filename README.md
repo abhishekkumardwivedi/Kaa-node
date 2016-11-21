@@ -15,28 +15,7 @@ KAA server should be up
 
 ### Installing
 These are the needed softwares to build Node-RED module and get it running
-* Install g++, CMake, Boost, SQLite3 for compiling Kaa C++ SDK library
-```
-sudo apt-get install g++ cmake libboost1.61-all-dev libsqlite3-0 libsqlite3-dev
 
-```
-* Install AvroC++ library
-```
-wget http://archive.apache.org/dist/avro/avro-1.8.1/cpp/avro-cpp-1.8.1.tar.gz
-tar -zxvf avro-cpp-1.8.1.tar.gz
-cd avro-cpp-1.8.1/
-cmake .
-sudo make install
-```
-* Install Botan 1.11 library
-```
-wget https://github.com/randombit/botan/archive/1.11.28.tar.gz
-tar -zxf 1.11.28.tar.gz
-cd botan-1.11.28/
-./configure.py
-sudo make install
-sudo ln -s /usr/local/include/botan-1.11/botan /usr/local/include/botan
-```
 * Install NodeJS and check the version. nodejs v4.2.6 was used for compilation.
 ```
 sudo apt-get install nodejs
@@ -59,6 +38,31 @@ cmake-js --version
 sudo npm install -g --unsafe-perm node-red node-red-admin
 sudo ufw allow 1880
 node-red --help
+```
+
+As we will be using C++ Kaa SDK, we need following build tool chain:
+
+* Install g++, CMake, Boost, SQLite3 for compiling Kaa C++ SDK library
+```
+sudo apt-get install g++ cmake libboost1.61-all-dev libsqlite3-0 libsqlite3-dev
+
+```
+* Install AvroC++ library
+```
+wget http://archive.apache.org/dist/avro/avro-1.8.1/cpp/avro-cpp-1.8.1.tar.gz
+tar -zxvf avro-cpp-1.8.1.tar.gz
+cd avro-cpp-1.8.1/
+cmake .
+sudo make install
+```
+* Install Botan 1.11 library
+```
+wget https://github.com/randombit/botan/archive/1.11.28.tar.gz
+tar -zxf 1.11.28.tar.gz
+cd botan-1.11.28/
+./configure.py
+sudo make install
+sudo ln -s /usr/local/include/botan-1.11/botan /usr/local/include/botan
 ```
 ### Compiling and running app
 
