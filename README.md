@@ -121,7 +121,7 @@ pull request if your change would look helpful to others.
 ## Authors
 
 * **Abhishek Dwivedi** - *independent technical consultant* - [OERDev](https://github.com/abhishekkumardwivedi)
-* *contact to hire or sponser for helping in your project R&D.*
+* *contact to hire [abhishekk@oerdev.com](abhishekk@oerdev.com) or sponser for helping in your project R&D.*
 
 See also the list of [contributors](https://github.com/abhishekkumardwivedi/Kaa-node/contributors) who participated
 in this project.
