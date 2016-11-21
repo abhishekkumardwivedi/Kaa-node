@@ -1,0 +1,16 @@
+{
+  "name": "kaa-notification",
+  "version": "1.0.0",
+  "description": "Async notification from Kaa server",
+  "author": "Abhishek Dwivedi",
+  "homepage": "https://github.com/abhishekkumardwivedi/Kaa-node",
+  "main": "main.js",
+  "scripts": {
+    "install": ""
+  },
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "cmake-js": "^3.3.1",
+    "nan": "^2.4.0"
+  }
+}
