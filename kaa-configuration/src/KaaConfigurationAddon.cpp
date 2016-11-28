@@ -17,8 +17,13 @@ using namespace kaa;
 
 const char savedConfig[] = "saved_config.cfg";
 
-// Native interface implementaton ------------------------------------
-
+/**
+ * Native interface implementaton
+ *
+ * For making C++ wrapped object and factory for wrapped object.
+ * Check for more details:
+ * https://github.com/nodejs/nan/blob/master/doc/object_wrappers.md
+ **/
 class MyObject : public ObjectWrap {
     public:
         static NAN_MODULE_INIT(Init);
@@ -33,10 +38,10 @@ class MyObject : public ObjectWrap {
 };
 
 /**
-* We are using libuv library for async I/O.
-* Here async_data structure will hold the payload to transform
-* from onConfigurationUpdated thread to main thread.
-**/
+ * We are using libuv library for async I/O.
+ * Here async_data structure will hold the payload to transform
+ * from onConfigurationUpdated thread to main thread.
+ **/
 struct async_data
 {
     uv_work_t request;
@@ -106,7 +111,9 @@ NAN_INLINE void callback_async_event (uv_work_t* req) {
     delete data;
 }
 
-// KAA config change listener ...
+/**
+ * KAA configuration change listener
+ **/
 class UserConfigurationReceiver : public IConfigurationReceiver {
 public:
     void displayConfiguration(const KaaRootConfiguration &configuration)
@@ -135,6 +142,10 @@ public:
     }
 };
 
+/**
+ * Do all Kaa protocol related tailoring here.
+ * Basically this does Kaa server connection initialization and then connection.
+ **/
 void kaa_connection_threadloop(void *n) {
     auto kaaClient = Kaa::newClient();
 
