@@ -5,6 +5,9 @@ addon interface with C++ native code.
 All modules are KAA client, the end node to KAA server, and should not be confused with part of KAA server.
 This client application is tested in Ubuntu-16.04 OS.
 
+# Demo video
+[![Creating Node-RED KAA node](https://i.ytimg.com/vi/mV8ofe8rQ7I/2.jpg?time=1480625110782)](https://www.youtube.com/embed/mV8ofe8rQ7I "KAA - Node-RED | NodeJS - Click to Watch!")
+
 ## Getting Started
 
 These instructions will help you to setup build environemnt and application execution environment.
