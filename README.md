@@ -2,7 +2,7 @@
 
 This project provides NodeJS and Node-RED interface to KAA server. Project modules are made by using NAN (v8)
 addon interface with C++ native code.
-All modules are the end node to KAA server and should not be confused with not the part of KAA server.
+All modules are KAA client, the end node to KAA server, and should not be confused with part of KAA server.
 This client application is tested in Ubuntu-16.04 OS.
 
 ## Getting Started
@@ -66,8 +66,8 @@ sudo ln -s /usr/local/include/botan-1.11/botan /usr/local/include/botan
 ```
 ### Compiling and running app
 
-There are separate folders for seperate KAA interface application. Chose which ever you are interested in.
-Download corresponding SDK library from KAA server to {APP_DIRECTORY}/lib/kaa/ and extract it there.
+There are separate folders for KAA interface applications. Go to the folder which ever you are interested in.
+Download corresponding C++ SDK library from KAA server to {APP_DIRECTORY}/lib/kaa/ and extract.
 ```
 cd lib/kaa/
 tar -zxvf kaa-cpp-ep-sdk-*.tar.gz
@@ -82,7 +82,7 @@ Now, go into application root folder e.g. kaa-notification and install nodeJS pa
 ```
 npm install
 ```
-Let's compile SDK lib. This compilation step is needed only one time. And needed to be compiled only when SDK lib is changed/updated.
+Let's compile SDK lib. This compilation step is needed only one time. And needed to be compiled again only when SDK lib is changed/updated.
 ```
 cd lib/kaa/
 cmake-js build
@@ -111,12 +111,12 @@ msg : Object
 ```
 
 ### What is not mentioned here
-All the setup guide is described with consideration that you already have prior experience with relevant projects. If you are new to any of these, it is very important to go through and understand at first. 
+All the setup guide described with consideration that you already have prior experience with relevant projects. If you are new to any of these, it is very important to go through and understand at first.
 
 ## Contribute
 
 If you are supporting more features to KAA or you find some changes in reference then raise issue and we will folloup with
-pull request if your change would look helpful to others.
+pull request if your change would look helpful to others. Or you can apply the changes which will help us.
 
 ## Authors
 
